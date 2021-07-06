@@ -8,14 +8,14 @@ const GifExpertApp = () => {
     "Dragon Ball",
   ]);
 
-//   const handleAdd = () => {
-//     setCategories([...categories, "Prueba"]);
-//   };
+  //   const handleAdd = () => {
+  //     setCategories([...categories, "Prueba"]);
+  //   };
 
   return (
     <>
       <h2>GifExpertApp</h2>
-      <AddCategory />
+      <AddCategory setCategories={setCategories} />
       <hr />
       <ol>
         {categories.map((category) => {
