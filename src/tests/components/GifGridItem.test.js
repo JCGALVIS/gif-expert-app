@@ -7,7 +7,7 @@ describe("Test in <GifGridItem/>", () => {
   const url = "http://estoesunaimagen.com";
   const wrapper = shallow(<GifGridItem title={title} url={url} />);
 
-  test("should display the component correctly", async () => {
+  test("should display the component correctly", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -16,13 +16,13 @@ describe("Test in <GifGridItem/>", () => {
     expect(p.text().trim()).toBe(title);
   });
 
-  test("it must have the image equal to the url and the title of the props", async () => {
+  test("it must have the image equal to the url and the title of the props", () => {
     const img = wrapper.find("img");
     expect(img.prop("src")).toBe(url);
     expect(img.prop("alt")).toBe(title);
   });
 
-  test("must have animate__fadeIn", async () => {
+  test("must have animate__fadeIn", () => {
     const div = wrapper.find("div");
     const className = div.prop("className");
     expect(className.includes("animate__fadeIn")).toBe(true);
